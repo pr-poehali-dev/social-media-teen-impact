@@ -1015,169 +1015,105 @@
   line-height: 1.55;
 }
 
-/* ===== PLATFORM SLIDES (VK + TG) ===== */
-.slide-vk,
-.slide-telegram {
+/* ===== SLIDE PLATFORMS ===== */
+.slide-platforms {
   background: #09090f;
 }
 
-.platform-tag {
-  font-family: "Oswald", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 6px;
-  letter-spacing: 0.1em;
-  margin-left: 4px;
+.platforms-intro {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0 0 20px;
+  line-height: 1.6;
+  animation: slideInRight 0.5s 0.1s both;
 }
 
-.vk-tag {
-  background: rgba(0, 119, 255, 0.2);
-  color: #60a5fa;
-  border: 1px solid rgba(0, 119, 255, 0.35);
-}
-.tg-tag {
-  background: rgba(39, 174, 239, 0.15);
-  color: #67e8f9;
-  border: 1px solid rgba(39, 174, 239, 0.3);
-}
-
-.platform-layout {
+.platforms-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 20px;
-  flex: 1;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
-.platform-features {
+.platform-card {
+  border-radius: 14px;
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.plat-card {
-  display: flex;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 10px;
-  padding: 12px 14px;
   animation: slideInRight 0.5s both;
-  transition: border-color 0.2s;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
 }
 
-.plat-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+.platform-card:hover {
+  transform: translateY(-2px);
 }
 
-.plat-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+.pc-vk {
+  background: rgba(0, 80, 200, 0.1);
+  border: 1px solid rgba(0, 100, 255, 0.25);
+  animation-delay: 0.1s;
+}
+.pc-tg {
+  background: rgba(0, 150, 200, 0.1);
+  border: 1px solid rgba(0, 180, 220, 0.25);
+  animation-delay: 0.2s;
+}
+.pc-yt {
+  background: rgba(200, 40, 40, 0.1);
+  border: 1px solid rgba(240, 60, 60, 0.25);
+  animation-delay: 0.3s;
+}
+.pc-other {
+  background: rgba(100, 80, 200, 0.08);
+  border: 1px solid rgba(140, 120, 220, 0.2);
+  animation-delay: 0.4s;
+}
+
+.pc-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  flex-shrink: 0;
+  gap: 12px;
 }
 
-.vk-icon {
-  background: linear-gradient(135deg, #1565c0, #1976d2);
-}
-.tg-icon {
-  background: linear-gradient(135deg, #0277bd, #0288d1);
-}
-
-.plat-title {
-  font-family: "Oswald", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 2px;
-}
-
-.plat-text {
-  font-size: 11.5px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.5;
-}
-
-.platform-risks {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.risks-title {
-  font-family: "Oswald", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-
-.risk-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.5;
-  animation: slideInRight 0.5s both;
-}
-
-.risk-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin-top: 5px;
-}
-
-.vk-dot {
-  background: #60a5fa;
-  box-shadow: 0 0 6px #60a5fa88;
-}
-.tg-dot {
-  background: #67e8f9;
-  box-shadow: 0 0 6px #67e8f988;
-}
-
-.vk-stat-box,
-.tg-stat-box {
-  margin-top: auto;
-  border-radius: 12px;
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.vk-stat-box {
-  background: rgba(0, 119, 255, 0.1);
-  border: 1px solid rgba(0, 119, 255, 0.25);
-}
-.tg-stat-box {
-  background: rgba(39, 174, 239, 0.1);
-  border: 1px solid rgba(39, 174, 239, 0.25);
-}
-
-.vk-stat-num,
-.tg-stat-num {
-  font-family: "Oswald", sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
+.pc-emoji {
+  font-size: 28px;
   line-height: 1;
 }
 
-.vk-stat-text,
-.tg-stat-text {
+.pc-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pc-reach {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 1px;
+}
+
+.pc-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+}
+
+.pc-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pc-tags span {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 2px 8px;
 }
 
 /* ===== SCROLLBAR ===== */

@@ -12,12 +12,11 @@ const slides = [
   { id: 3,  label: "Проблема" },
   { id: 4,  label: "Объект" },
   { id: 5,  label: "Статистика" },
-  { id: 6,  label: "ВКонтакте" },
-  { id: 7,  label: "Telegram" },
-  { id: 8,  label: "Позитив" },
-  { id: 9,  label: "Риски" },
-  { id: 10, label: "Рекомендации" },
-  { id: 11, label: "Заключение" },
+  { id: 6,  label: "Платформы" },
+  { id: 7,  label: "Позитив" },
+  { id: 8,  label: "Риски" },
+  { id: 9,  label: "Рекомендации" },
+  { id: 10, label: "Заключение" },
 ];
 
 const TOTAL = slides.length;
@@ -84,12 +83,11 @@ export default function App() {
         {current === 3  && <SlideProblem />}
         {current === 4  && <SlideObject />}
         {current === 5  && <SlideStats />}
-        {current === 6  && <SlideVK />}
-        {current === 7  && <SlideTelegram />}
-        {current === 8  && <SlidePositive />}
-        {current === 9  && <SlideProblems />}
-        {current === 10 && <SlideRecs />}
-        {current === 11 && <SlideConclusion />}
+        {current === 6  && <SlidePlatforms />}
+        {current === 7  && <SlidePositive />}
+        {current === 8  && <SlideProblems />}
+        {current === 9  && <SlideRecs />}
+        {current === 10 && <SlideConclusion />}
       </div>
 
       <div className="nav-arrows">
@@ -112,14 +110,14 @@ function SlideHero() {
       <div className="hero-bg" style={{ backgroundImage: `url(${HERO_IMG})` }} />
       <div className="hero-overlay" />
       <div className="hero-content">
-        <div className="hero-tag">📱 ВКонтакте · Telegram · Исследование 2026</div>
+        <div className="hero-tag">📱 Исследование · 2026</div>
         <h1 className="hero-title">
           Влияние<br />
           <span className="hero-accent">соцсетей</span><br />
           на подростков
         </h1>
         <p className="hero-sub">
-          Как ВКонтакте и Telegram формируют поведение,<br />
+          Как социальные сети формируют поведение,<br />
           психику и ценности молодого поколения
         </p>
         <div className="hero-scroll">
@@ -167,7 +165,7 @@ function SlideRelevance() {
 /* ── 2. ЦЕЛЬ И ЗАДАЧИ ──────────────────────────────── */
 function SlideGoals() {
   const tasks = [
-    "Изучить характер и интенсивность использования ВКонтакте и Telegram среди подростков 12–17 лет",
+    "Изучить характер и интенсивность использования социальных сетей среди подростков 12–17 лет",
     "Выявить позитивные эффекты: развитие коммуникации, доступ к информации, самовыражение",
     "Проанализировать негативные последствия: зависимость, кибербуллинг, нарушение сна",
     "Разработать практические рекомендации для подростков, родителей и педагогов",
@@ -181,8 +179,9 @@ function SlideGoals() {
       <div className="goal-box">
         <div className="goal-label">🎯 Цель</div>
         <div className="goal-text">
-          Изучить влияние социальных сетей ВКонтакте и Telegram на психологическое состояние,
-          поведение и развитие подростков, и сформулировать рекомендации по осознанному использованию.
+          Изучить влияние социальных сетей на психологическое состояние,
+          поведение и развитие подростков, и сформулировать рекомендации
+          по осознанному их использованию.
         </div>
       </div>
       <div className="tasks-label">📋 Задачи</div>
@@ -248,16 +247,16 @@ function SlideObject() {
           <div className="obj-title">Подростки 12–17 лет</div>
           <div className="obj-desc">
             Учащиеся средней и старшей школы — активная аудитория социальных сетей,
-            находящаяся в период активного формирования личности и социальных навыков.
+            находящаяся в периоде формирования личности и социальных навыков.
           </div>
         </div>
         <div className="obj-card obj-subject">
           <div className="obj-badge">Предмет</div>
           <div className="obj-icon-wrap">🔍</div>
-          <div className="obj-title">Влияние ВКонтакте и Telegram</div>
+          <div className="obj-title">Влияние социальных сетей</div>
           <div className="obj-desc">
-            Характер, интенсивность и последствия использования двух крупнейших
-            российских платформ для психологического развития подростков.
+            Характер, интенсивность и последствия использования популярных
+            платформ для психологического развития подростков.
           </div>
         </div>
         <div className="obj-card obj-hyp">
@@ -275,7 +274,7 @@ function SlideObject() {
           <div className="obj-title">Анализ и опрос</div>
           <div className="obj-desc">
             Анализ научных источников, статистики платформ, анкетирование учащихся,
-            анализ психологических исследований 2022–2025 гг.
+            изучение психологических исследований 2022–2025 гг.
           </div>
         </div>
       </div>
@@ -293,10 +292,10 @@ function SlideStats() {
       </div>
       <div className="stats-grid">
         {[
-          { val: 87, suf: "%", label: "подростков в Telegram ежедневно", cl: "sc1" },
-          { val: 72, suf: "%", label: "подростков активны ВКонтакте", cl: "sc2" },
-          { val: 4, suf: "ч", label: "среднее экранное время в день", cl: "sc3" },
-          { val: 12, suf: "", label: "лет — средний возраст начала", cl: "sc4" },
+          { val: 80, suf: "%", label: "подростков используют соцсети ежедневно", cl: "sc1" },
+          { val: 4,  suf: "ч", label: "среднее экранное время в день", cl: "sc2" },
+          { val: 12, suf: "",  label: "лет — средний возраст начала использования", cl: "sc3" },
+          { val: 63, suf: "%", label: "сообщают о тревоге без телефона", cl: "sc4" },
         ].map((s, i) => (
           <div className={`stat-card ${s.cl}`} key={i}>
             <div className="stat-big"><AnimatedNumber target={s.val} suffix={s.suf} /></div>
@@ -306,13 +305,13 @@ function SlideStats() {
       </div>
       <div className="stats-bars">
         {[
-          { label: "Telegram", pct: 87, color: "#a78bfa" },
-          { label: "ВКонтакте", pct: 72, color: "#60a5fa" },
-          { label: "YouTube", pct: 91, color: "#f87171" },
-          { label: "TikTok", pct: 54, color: "#34d399" },
+          { label: "Смотрят видео", pct: 91, color: "#f87171" },
+          { label: "Общаются в чатах", pct: 87, color: "#a78bfa" },
+          { label: "Листают ленту", pct: 79, color: "#60a5fa" },
+          { label: "Создают контент", pct: 54, color: "#34d399" },
         ].map((b, i) => (
           <div className="tg-bar" key={i} style={{ padding: "10px 20px" }}>
-            <span style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", minWidth: 90 }}>{b.label}</span>
+            <span style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", minWidth: 150 }}>{b.label}</span>
             <div className="bar-track" style={{ flex: 1 }}>
               <div className="bar-fill" style={{ width: `${b.pct}%`, background: `linear-gradient(90deg, ${b.color}88, ${b.color})`, animationDelay: `${i * 0.1}s` }}>
                 <span>{b.pct}%</span>
@@ -325,52 +324,88 @@ function SlideStats() {
   );
 }
 
-/* ── 6. ВКОНТАКТЕ ──────────────────────────────────── */
-function SlideVK() {
-  const features = [
-    { icon: "Users", title: "Сообщества", text: "Миллионы групп по интересам — от учёбы до хобби. Подростки находят «своих» и формируют идентичность." },
-    { icon: "Music", title: "Музыка и видео", text: "ВКонтакте — главная музыкальная платформа для молодёжи. Формирует вкусы и культурный код поколения." },
-    { icon: "MessageSquare", title: "Общение", text: "Переписки, звонки, стены — ВК остаётся основной площадкой для неформального общения школьников." },
-    { icon: "Image", title: "Самопрезентация", text: "Профиль, фото, репосты — подростки учатся формировать публичный образ и управлять впечатлением." },
-  ];
-  const risks = [
-    "Алгоритмическая лента создаёт «информационный пузырь»",
-    "Сравнение с чужими «идеальными» жизнями снижает самооценку",
-    "Лайки и реакции формируют зависимость от чужого одобрения",
-    "Высокий риск кибербуллинга в открытых сообществах",
-  ];
+/* ── 6. ПЛАТФОРМЫ ──────────────────────────────────── */
+function SlidePlatforms() {
   return (
-    <div className="slide slide-vk">
+    <div className="slide slide-platforms">
       <div className="slide-header">
         <span className="slide-num">06</span>
-        <h2>ВКонтакте и подростки</h2>
-        <span className="platform-tag vk-tag">VK</span>
+        <h2>Популярные платформы</h2>
       </div>
-      <div className="platform-layout">
-        <div className="platform-features">
-          {features.map((f, i) => (
-            <div className="plat-card" key={i} style={{ animationDelay: `${i * 0.08}s` }}>
-              <div className="plat-icon vk-icon">
-                <Icon name={f.icon as Parameters<typeof Icon>[0]["name"]} size={18} />
-              </div>
-              <div>
-                <div className="plat-title">{f.title}</div>
-                <div className="plat-text">{f.text}</div>
-              </div>
+      <p className="platforms-intro">
+        Среди российских подростков наиболее распространены несколько платформ.
+        Каждая имеет свою специфику и по-своему влияет на пользователя.
+      </p>
+      <div className="platforms-grid">
+        <div className="platform-card pc-vk">
+          <div className="pc-header">
+            <div className="pc-emoji">💬</div>
+            <div>
+              <div className="pc-name">ВКонтакте</div>
+              <div className="pc-reach">~72% подростков</div>
             </div>
-          ))}
+          </div>
+          <div className="pc-desc">
+            Главная социальная сеть для общения, музыки и сообществ по интересам.
+            Формирует социальную идентичность — профиль, группы, репосты учат
+            подростка выстраивать публичный образ и находить «своих».
+          </div>
+          <div className="pc-tags">
+            <span>Сообщества</span><span>Музыка</span><span>Новости</span>
+          </div>
         </div>
-        <div className="platform-risks">
-          <div className="risks-title">⚠️ Риски платформы</div>
-          {risks.map((r, i) => (
-            <div className="risk-item" key={i} style={{ animationDelay: `${i * 0.08}s` }}>
-              <span className="risk-dot vk-dot" />
-              <span>{r}</span>
+
+        <div className="platform-card pc-tg">
+          <div className="pc-header">
+            <div className="pc-emoji">✈️</div>
+            <div>
+              <div className="pc-name">Telegram</div>
+              <div className="pc-reach">~87% подростков</div>
             </div>
-          ))}
-          <div className="vk-stat-box">
-            <div className="vk-stat-num">72%</div>
-            <div className="vk-stat-text">подростков используют ВК для поиска развлечений и общения ежедневно</div>
+          </div>
+          <div className="pc-desc">
+            Быстрый мессенджер с каналами и ботами. Стал основным источником
+            информации для поколения Z: образовательный контент, новости,
+            подготовка к экзаменам — всё в одном приложении.
+          </div>
+          <div className="pc-tags">
+            <span>Чаты</span><span>Каналы</span><span>Боты</span>
+          </div>
+        </div>
+
+        <div className="platform-card pc-yt">
+          <div className="pc-header">
+            <div className="pc-emoji">▶️</div>
+            <div>
+              <div className="pc-name">Видеоплатформы</div>
+              <div className="pc-reach">~91% подростков</div>
+            </div>
+          </div>
+          <div className="pc-desc">
+            Видео — главный формат контента для подростков. Короткие ролики
+            формируют клиповое мышление, алгоритмы затягивают в бесконечную
+            ленту рекомендаций.
+          </div>
+          <div className="pc-tags">
+            <span>Шортсы</span><span>Стримы</span><span>Обучение</span>
+          </div>
+        </div>
+
+        <div className="platform-card pc-other">
+          <div className="pc-header">
+            <div className="pc-emoji">🌐</div>
+            <div>
+              <div className="pc-name">Другие сети</div>
+              <div className="pc-reach">TikTok, Pinterest, Discord</div>
+            </div>
+          </div>
+          <div className="pc-desc">
+            Узкоспециализированные платформы — для геймеров, творческих людей,
+            фанатов. Создают плотные субкультурные сообщества с высоким
+            уровнем вовлечённости.
+          </div>
+          <div className="pc-tags">
+            <span>Субкультуры</span><span>Геймеры</span><span>Творчество</span>
           </div>
         </div>
       </div>
@@ -378,71 +413,18 @@ function SlideVK() {
   );
 }
 
-/* ── 7. TELEGRAM ───────────────────────────────────── */
-function SlideTelegram() {
-  const features = [
-    { icon: "Send", title: "Мессенджер", text: "Быстрые личные и групповые чаты. Подростки общаются с классом, друзьями и семьёй в одном месте." },
-    { icon: "Rss", title: "Каналы", text: "Образовательный контент, новости, хобби. Telegram — главный источник информации для поколения Z." },
-    { icon: "Bot", title: "Боты", text: "Боты для учёбы, переводов, расписания. Формируют технологическую грамотность с раннего возраста." },
-    { icon: "Lock", title: "Приватность", text: "Закрытые группы, секретные чаты — подростки ценят ощущение безопасности и контроля над данными." },
-  ];
-  const risks = [
-    "Неконтролируемый доступ к взрослому и опасному контенту",
-    "Закрытые чаты скрывают общение от родителей",
-    "Распространение фейков через непроверенные каналы",
-    "Вербовка в деструктивные сообщества через боты",
-  ];
-  return (
-    <div className="slide slide-telegram">
-      <div className="slide-header">
-        <span className="slide-num">07</span>
-        <h2>Telegram и подростки</h2>
-        <span className="platform-tag tg-tag">TG</span>
-      </div>
-      <div className="platform-layout">
-        <div className="platform-features">
-          {features.map((f, i) => (
-            <div className="plat-card" key={i} style={{ animationDelay: `${i * 0.08}s` }}>
-              <div className="plat-icon tg-icon">
-                <Icon name={f.icon as Parameters<typeof Icon>[0]["name"]} size={18} />
-              </div>
-              <div>
-                <div className="plat-title">{f.title}</div>
-                <div className="plat-text">{f.text}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="platform-risks">
-          <div className="risks-title">⚠️ Риски платформы</div>
-          {risks.map((r, i) => (
-            <div className="risk-item" key={i} style={{ animationDelay: `${i * 0.08}s` }}>
-              <span className="risk-dot tg-dot" />
-              <span>{r}</span>
-            </div>
-          ))}
-          <div className="tg-stat-box">
-            <div className="tg-stat-num">87%</div>
-            <div className="tg-stat-text">подростков используют Telegram ежедневно — это самый быстрорастущий мессенджер среди 12–17 лет</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ── 8. ПОЗИТИВ ────────────────────────────────────── */
+/* ── 7. ПОЗИТИВ ────────────────────────────────────── */
 function SlidePositive() {
   const items = [
-    { icon: "Users", title: "Коммуникация", text: "ВКонтакте и Telegram позволяют общаться без барьеров — подростки поддерживают отношения на расстоянии." },
-    { icon: "BookOpen", title: "Обучение", text: "Образовательные каналы Telegram и сообщества ВКонтакте помогают готовиться к ЕГЭ и изучать языки." },
+    { icon: "Users", title: "Коммуникация", text: "Соцсети позволяют общаться с друзьями и одноклассниками в любое время — без барьеров расстояния." },
+    { icon: "BookOpen", title: "Обучение", text: "Образовательные каналы и сообщества помогают готовиться к ЕГЭ, изучать языки, следить за наукой." },
     { icon: "Heart", title: "Поддержка", text: "Группы по интересам дают ощущение принадлежности и помогают найти единомышленников по всей стране." },
-    { icon: "Zap", title: "Самовыражение", text: "Создание контента, стикеров, ботов, постов — развивает творческие и технические навыки." },
+    { icon: "Zap", title: "Самовыражение", text: "Создание контента, постов, ботов развивает творческие и технические навыки подростка." },
   ];
   return (
     <div className="slide slide-positive">
       <div className="slide-header">
-        <span className="slide-num">08</span>
+        <span className="slide-num">07</span>
         <h2>Позитивное влияние</h2>
       </div>
       <div className="pos-layout">
@@ -468,20 +450,20 @@ function SlidePositive() {
   );
 }
 
-/* ── 9. ПРОБЛЕМЫ ───────────────────────────────────── */
+/* ── 8. РИСКИ ──────────────────────────────────────── */
 function SlideProblems() {
   const problems = [
-    { icon: "Moon", label: "Нарушение сна", pct: 78, color: "#ff6b6b" },
-    { icon: "Brain", label: "Снижение концентрации", pct: 65, color: "#ffa94d" },
-    { icon: "ShieldOff", label: "Кибербуллинг", pct: 42, color: "#ff6b6b" },
-    { icon: "Eye", label: "Информационная зависимость", pct: 71, color: "#da77f2" },
-    { icon: "TrendingDown", label: "Снижение самооценки", pct: 58, color: "#ffa94d" },
-    { icon: "Clock", label: "Прокрастинация", pct: 83, color: "#da77f2" },
+    { icon: "Moon",         label: "Нарушение сна",              pct: 78, color: "#ff6b6b" },
+    { icon: "Brain",        label: "Снижение концентрации",       pct: 65, color: "#ffa94d" },
+    { icon: "ShieldOff",    label: "Кибербуллинг",                pct: 42, color: "#ff6b6b" },
+    { icon: "Eye",          label: "Информационная зависимость",  pct: 71, color: "#da77f2" },
+    { icon: "TrendingDown", label: "Снижение самооценки",         pct: 58, color: "#ffa94d" },
+    { icon: "Clock",        label: "Прокрастинация",              pct: 83, color: "#da77f2" },
   ];
   return (
     <div className="slide slide-problems">
       <div className="slide-header">
-        <span className="slide-num">09</span>
+        <span className="slide-num">08</span>
         <h2>Проблемы и риски</h2>
       </div>
       <div className="prob-grid">
@@ -503,18 +485,18 @@ function SlideProblems() {
   );
 }
 
-/* ── 10. РЕКОМЕНДАЦИИ ──────────────────────────────── */
+/* ── 9. РЕКОМЕНДАЦИИ ───────────────────────────────── */
 function SlideRecs() {
   const recs = [
-    { num: "01", icon: "Timer", title: "Цифровой детокс", text: "Выделяйте 1–2 часа в день без телефона. Практикуйте «тихий час» перед сном." },
-    { num: "02", icon: "Shield", title: "Настройки приватности", text: "Закрытые аккаунты, осознанный выбор подписок, блокировка токсичного контента." },
-    { num: "03", icon: "MessageCircle", title: "Открытый диалог", text: "Родители и дети — говорите о том, что вы читаете в ВКонтакте и Telegram." },
-    { num: "04", icon: "Activity", title: "Офлайн-активность", text: "Спорт, хобби, живое общение — равновесие между онлайн и реальной жизнью." },
+    { num: "01", icon: "Timer",         title: "Цифровой детокс",       text: "Выделяйте 1–2 часа в день без телефона. Практикуйте «тихий час» перед сном." },
+    { num: "02", icon: "Shield",        title: "Настройки приватности", text: "Закрытые аккаунты, осознанный выбор подписок, блокировка токсичного контента." },
+    { num: "03", icon: "MessageCircle", title: "Открытый диалог",       text: "Родители и дети — разговаривайте о том, что вы читаете и смотрите в соцсетях." },
+    { num: "04", icon: "Activity",      title: "Офлайн-активность",     text: "Спорт, хобби, живое общение — равновесие между онлайн и реальной жизнью." },
   ];
   return (
     <div className="slide slide-recs">
       <div className="slide-header">
-        <span className="slide-num">10</span>
+        <span className="slide-num">09</span>
         <h2>Рекомендации</h2>
       </div>
       <div className="recs-grid">
@@ -533,7 +515,7 @@ function SlideRecs() {
   );
 }
 
-/* ── 11. ЗАКЛЮЧЕНИЕ ────────────────────────────────── */
+/* ── 10. ЗАКЛЮЧЕНИЕ ────────────────────────────────── */
 function SlideConclusion() {
   return (
     <div className="slide slide-conclusion">
@@ -541,13 +523,13 @@ function SlideConclusion() {
       <div className="concl-content">
         <div className="concl-tag">💡 Выводы</div>
         <h2 className="concl-title">
-          ВКонтакте и Telegram — инструменты.<br />
+          Соцсети — это инструмент.<br />
           <span className="concl-accent">Важно, как мы их используем.</span>
         </h2>
         <div className="concl-points">
           {[
             "Соцсети — неотъемлемая часть жизни подростка, отрицать это бессмысленно",
-            "ВКонтакте формирует социальную идентичность, Telegram развивает информационную культуру",
+            "Они открывают возможности для обучения, общения и самовыражения",
             "Осознанное использование снижает риски и усиливает позитивные эффекты",
             "Цифровая грамотность — ключевой навык XXI века для каждого подростка",
           ].map((p, i) => (
